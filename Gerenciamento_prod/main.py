@@ -30,9 +30,32 @@ class produto(categoria):
         return self.aplicar_desconto
 
 class pedido:
-    def __init__(self, produto, quantidade):
-        self.produto = produto
-        self.quantidade = quantidade
-        
-        
-        
+    def __init__(self):
+        self.produto = []
+        self.quantidade = {}
+    
+    def adicionar_produto(self, produto, quantidade):
+        if produto not in self.produto:
+            self.produto.append(produto)
+        if produto in self.quantidade:
+            self.quantidade[produto] += quantidade
+        else:
+            self.quantidade[produto] = quantidade
+
+    def excluir_produto(self, produto, quantidade):
+            #terminar
+            a = 1
+
+
+
+
+    def exibir(self):
+        print("ITENS:")
+        for produto, quantidade in self.quantidade.items():
+            print(f'{produto}, {quantidade} Unidade(s)')
+    
+
+pedido = pedido()
+pedido.adicionar_produto('Produto A', 3)
+pedido.adicionar_produto('Produto B', 4)
+pedido.exibir()
