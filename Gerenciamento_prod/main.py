@@ -20,12 +20,12 @@ class produto(categoria):
         return self.estoque
     
     def remover_estoque(self, quantidade):
-        if self.estoque < quantidade:
-            print(f'Estoque insuficiente! possui apenas {self.estoque} peças')
-            return
-        else:
+        if self.estoque >= quantidade:
             self.estoque -= quantidade
-            return self.estoque
+            
+        else:
+            print(f'Estoque insuficiente! possui apenas {self.estoque} peças')
+
     def preco_desconto(self):
         return self.aplicar_desconto
 
@@ -42,12 +42,13 @@ class pedido:
         else:
             self.quantidade[produto] = quantidade
 
-    def excluir_produto(self, produto, quantidade):
-            #terminar
-            a = 1
-
-
-
+    def remover_produto(self, produto):
+        if produto.nome in self.quantidades:
+            quantidade = self.quantidades.pop(produto.nome)
+            produto.adicionar_estoque(quantidade)
+            self.produtos.remove(produto)
+        else:
+            print("Produto não está no pedido")
 
     def exibir(self):
         print("ITENS:")
@@ -55,6 +56,7 @@ class pedido:
             print(f'{produto}, {quantidade} Unidade(s)')
     
 
+#teste
 pedido = pedido()
 pedido.adicionar_produto('Produto A', 3)
 pedido.adicionar_produto('Produto B', 4)
