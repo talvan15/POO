@@ -66,19 +66,26 @@ class ContaSalario(ContaBancaria):
             print(f'Seu limite de saques já foi atingido! ')
 
 
-corrente = ContaCorrente("talvan", 2121)
-poupanca = ContaPoupanca("jose", 2122)
-salario = ContaSalario("alves", 2123)
+def testeContas():
 
-corrente.depositar(500)
-corrente.sacar(600)
-corrente.exibir()
+    corrente = ContaCorrente("talvan", 2121)
+    poupanca = ContaPoupanca("jose", 2122)
+    salario = ContaSalario("alves", 2123)
 
-poupanca.depositar(500)
-poupanca.AplicarRendimento(0.01)
-poupanca.sacar(300)
-poupanca.exibir()
+    print('\nCONTA CORRENTE:')
+    corrente.depositar(500)
+    corrente.sacar(600)
+    corrente.exibir()
 
-salario.depositar(1000)
-salario.saque(1000)
-salario.exibir()
+    print('\nCONTA POUPANÇA:')
+    poupanca.depositar(500)
+    poupanca.AplicarRendimento(0.01)
+    poupanca.sacar(300)
+    poupanca.exibir()
+
+    print('\nCONTA SALÁRIO:')
+    salario.depositar(1000)
+    salario.saque(1000)
+    salario.exibir()
+
+testeContas()
