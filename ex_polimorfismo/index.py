@@ -1,4 +1,7 @@
+from abc import ABC, abstractmethod
+
 class Animal:
+    @abstractmethod
     def emitirSom(self):
         pass
 
