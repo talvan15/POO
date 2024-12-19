@@ -1,0 +1,12 @@
+Parte 1 - Conceitos Teóricos
+1.a - O encapsulamento tem como princípio proteger atribustos e métodos de uma classe, restrigindo o acesso diretamente a eles, garantindo que os dados de um objeto sejam manipulados de forma controlada.
+
+1.b - Na linguagem python o encapsulamento é dado através de modificadores de acesso, podendo defini os objetos da classe como público, privado ou protegido, e tendo acesso à esses métodos através de getters e setters.
+
+2.- A herança no em POO permite que uma classe chamadas (subclasses) ou clase filha, herde atributos e métodos de uma outra classe (superclasse) ou classe pai, permitindo o reultilização de código e uma melhor hierarquia entre as classes. 
+como por exemplo, uma classe denominada Pessoa pode ter atributos como peso e altura e métodos como andar e falar. uma outra classe Estudante(pessoa) herda todos os atributos e métodos da classe Pessoa, mas pode ter outros métodos como estudar(), por exemplo.
+Já o polimorfismo permite que métodos com o mesmo nome sejam implementados de formas diferentes em classes distintas. como por exemplo, uma classe Animal tem um método Emitir_som(), outras classes que herdam da classe animal, como por exemplo, as classes Mamifero e Ave, podem usar o mesmo método Emitir_som para emitir sons distintos.
+
+3. - Uma classe é um modelo que define as características (chamadas de atributos) e os comportamentos (Métodos) que os objetos criados apartir dessa classe terão. O objeto representa algo real que foi criado a partir dessa classe. como exemplo, a classe Carro tem os atributos "Cor" e "marca", podemos criar objetos a partir dessa classe como carro1 = ("Azul", "Toyota") e carro2 = ("Banco", "Fiat"), os objetos carros 1 e 2 são distintos, criados a partir da mesma classe.
+
+4. - A Sobrecarga de métodos ocorre quando em uma mesma classe há métodos com o mesmo nome mas com assinaturas diferentes, permitindo que esse método seja chmado de varias maneiras diferentes, dependendo dos parâmetros. Já a sobrescrita de métodos ocorre quando uma subclasse redefine um método da sua superclasse para fornecer uma funcionalidade específica diferentemente da sobrecarga, a assinatura do método deve ser a mesma na classe Filha e na classe Pai.
